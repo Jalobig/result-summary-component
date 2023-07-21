@@ -1,0 +1,87 @@
+// Colors
+
+// Primary
+
+$color-secondary: rgb(0, 189, 145);
+$color-primary: rgb(17, 37, 212);
+$color-tertiary: hsl(0, 100%, 67%);
+$color-quarternary: hsl(39, 100%, 56%);
+
+
+
+// Gradients
+
+$color-gradiant-primary-top: hsl(252, 100%, 67%);
+$color-gradiant-primary-bottom: hsl(241, 81%, 54%);
+$color-gradiant-circle-top: hsl(256, 72%, 46%);
+$color-gradiant-circle-bottom: hsl(241, 72%, 46%);
+
+
+// Neutral
+
+$color-white: hsl(0, 0%, 100%);
+$color-light-blue: hsl(221, 100%, 96%);
+$color-light-lavender: hsl(241, 100%, 89%);
+$color-dark-grey: hsl(224, 30%, 27%);
+$color-black: hsl(0, 0%, 0%);
+
+
+// Typography
+
+$body-font: 'Hanken Grotesk', sans-serif;
+$title-size: 2.5rem;
+
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+    font-size: 62.5%;
+    
+}
+body {
+    box-sizing: border-box;
+    font-family: $body-font;
+    font-size: 1.8rem;
+}
+
+@mixin clearfix {
+  &::after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+// MEDIA QUERY MANAGER
+/*
+0 - 375px:      Phone
+375px - 1440px: Desktop
+
+$breakpoint arguement choices:
+- phone
+- desktop
+
+1em = 16px
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+      @media only screen and (max-width: 23.4375em) { @content };    //375px
+  }
+  @if $breakpoint == big-desktop {
+      @media only screen and (min-width: 90em) { @content };    //1440px
+  }
+}

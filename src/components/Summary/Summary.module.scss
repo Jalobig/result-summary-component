@@ -1,0 +1,117 @@
+// Colors
+
+// Primary
+
+$color-secondary: rgb(0, 189, 145);
+$color-primary: rgb(17, 37, 212);
+$color-tertiary: hsl(0, 100%, 67%);
+$color-quarternary: hsl(39, 100%, 56%);
+
+
+
+// Gradients
+
+$color-gradiant-primary-top: hsl(252, 100%, 67%);
+$color-gradiant-primary-bottom: hsl(241, 81%, 54%);
+$color-gradiant-circle-top: hsl(256, 72%, 46%);
+$color-gradiant-circle-bottom: hsl(241, 72%, 46%);
+
+
+// Neutral
+
+$color-white: hsl(0, 0%, 100%);
+$color-light-blue: hsl(221, 100%, 96%);
+$color-light-lavender: hsl(241, 100%, 89%);
+$color-dark-grey: hsl(224, 30%, 27%);
+$color-black: hsl(0, 0%, 0%);
+
+
+// Typography
+
+$body-font: 'Hanken Grotesk', sans-serif;
+$title-size: 2.5rem;
+
+// Media
+$phone-size: 600px;
+
+.summary {
+    display: inline-block;
+    padding: 4rem;
+    position: absolute;
+    right: 0;
+    width: 50%;
+    &__title {
+      color: $color-dark-grey;
+      font-size: $title-size;
+      margin-bottom: 2.3rem;
+      @media only screen and (max-width: $phone-size) {
+        text-align: start;
+      }
+    }
+    &__list-item {
+      border-radius: 1rem;
+      margin-bottom: 1.5rem;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      span {
+        display: flex;
+      }
+      @media only screen and (max-width: $phone-size) {
+        max-width: 100%;
+      }
+    }
+    &__icon {
+      margin-right: 1rem;
+    }
+
+    @media only screen and (max-width: $phone-size) {
+      display: block;
+      position: relative;
+      width: 100%;
+    }
+  }
+
+  .mark {
+    float: right;
+    color: $color-dark-grey;
+    span {
+      font-weight: 800;
+    }
+  }
+  
+  .button {
+  
+      background-color: $color-dark-grey;
+      border-radius: 2.5rem;
+      color: $color-white;
+      display: inline-block;
+      font-size: 2rem;
+      margin-top: 2rem;
+      padding: 1.4rem;
+      text-align: center;
+      text-decoration: none;
+      width: 100%;
+      &:active, &:hover{
+          background-color: $color-gradiant-primary-bottom;
+      }
+      }
+  
+  .danger {
+      background-color: rgba($color-tertiary, 0.1);
+      color: $color-tertiary;
+  }
+  .warning {
+      background-color: rgba($color-quarternary, 0.1);
+      color: $color-quarternary;
+  
+  }
+  .success {
+      background-color: rgba($color-secondary, 0.1);
+      color: $color-secondary;
+  }
+  .info {
+      background-color: rgba($color-primary, 0.1);
+      color: $color-primary;
+  }
+  
