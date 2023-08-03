@@ -50,38 +50,3 @@ body {
     font-size: 1.8rem;
 }
 
-@mixin clearfix {
-  &::after {
-      content: "";
-      display: table;
-      clear: both;
-  }
-}
-
-@mixin absCenter {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
-// MEDIA QUERY MANAGER
-/*
-0 - 375px:      Phone
-375px - 1440px: Desktop
-
-$breakpoint arguement choices:
-- phone
-- desktop
-
-1em = 16px
-*/
-@mixin respond($breakpoint) {
-  @if $breakpoint == phone {
-      @media only screen and (max-width: 23.4375em) { @content };    //375px
-  }
-  @if $breakpoint == big-desktop {
-      @media only screen and (min-width: 90em) { @content };    //1440px
-  }
-}
